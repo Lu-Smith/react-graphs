@@ -9,10 +9,13 @@ function App() {
     <>
       <h1>Graphs</h1>
       <div className="card">
-        <button onClick={() => setStart(true)}>
-          Start
+        <button onClick={() => setStart(prev => !prev)}>
+        {start ? 'Start' : 'Home Page'}
         </button>
-        {start ? <MainPage /> : 'Welcome'}
+        <div>
+        {start ? <MainPage /> : <h2>Discover new world of data 📈</h2>}
+        </div>
+      
       </div>
 
     </>

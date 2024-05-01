@@ -61,7 +61,8 @@ button:focus-visible {
 }
 
 .Graph {
- border: 1px solid #646cff;
+ height: 400px;
+ border: 1px solid #2f3587;
  border-radius: 10px;
  padding: 20px;
 }

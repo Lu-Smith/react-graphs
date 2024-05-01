@@ -1,6 +1,8 @@
 import React from 'react';
 import PieGraph from './PieGraph';
 import BarGraph from './BarGraph';
+import LineGraph from './LineGraph';
+import AreaGraph from './AreaGraph';
 
 const MainPage = () => {
 
@@ -23,6 +25,8 @@ const MainPage = () => {
       <h2>Social Network Users</h2>
         <PieGraph data={data} />
         <BarGraph data={data} />
+        <LineGraph data={data} />
+        <AreaGraph data={data} />
     </div>
   )
 }

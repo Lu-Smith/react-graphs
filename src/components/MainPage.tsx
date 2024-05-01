@@ -13,16 +13,16 @@ const MainPage: React.FC<MainProps> = ({pageNumber}) => {
 
   const data = [
     {name: "Facebook", value: 2.8},
+    {name: "TikTok", value: 1},
     {name: "Instagram", value: 1},
+    {name: "Reddit", value: 0.43},
     {name: "SnapChat", value: 0.5},
     {name: "Twitter", value: 0.33},
-    {name: "Twitch", value: 0.03},
-    {name: "TikTok", value: 1},
     {name: "LinkedIn", value: 0.7},
+    {name: "Twitch", value: 0.03},
     {name: "Pinterest", value: 0.45},
-    {name: "Reddit", value: 0.43},
-    {name: "Telegram", value: 0.5},
     {name: "Discord", value: 0.15},
+    {name: "Telegram", value: 0.5},
   ]
 
   return (

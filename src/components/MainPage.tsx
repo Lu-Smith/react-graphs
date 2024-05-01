@@ -5,7 +5,11 @@ import LineGraph from './LineGraph';
 import AreaGraph from './AreaGraph';
 import ScatterGraph from './ScatterGraph';
 
-const MainPage = () => {
+interface MainProps {
+  pageNumber: number
+}
+
+const MainPage: React.FC<MainProps> = ({pageNumber}) => {
 
   const data = [
     {name: "Facebook", value: 2.8},
@@ -15,22 +19,21 @@ const MainPage = () => {
     {name: "Twitch", value: 0.03},
     {name: "TikTok", value: 1},
     {name: "LinkedIn", value: 0.7},
- 
     {name: "Pinterest", value: 0.45},
     {name: "Reddit", value: 0.43},
     {name: "Telegram", value: 0.5},
     {name: "Discord", value: 0.15},
-    
   ]
 
   return (
     <div>
       <h2>Social Network Users</h2>
-        <PieGraph data={data} />
-        <BarGraph data={data} />
-        <LineGraph data={data} />
-        <AreaGraph data={data} />
-        <ScatterGraph data={data} />
+      {pageNumber === 1 ? <PieGraph data={data}/> :
+      pageNumber === 2 ? <BarGraph data={data}/> :
+      pageNumber === 3 ? <LineGraph data={data}/> :
+      pageNumber === 4 ? <AreaGraph data={data}/> :
+      <ScatterGraph data={data}/>
+      }
     </div>
   )
 }

@@ -3,21 +3,22 @@ import PieGraph from './PieGraph';
 import BarGraph from './BarGraph';
 import LineGraph from './LineGraph';
 import AreaGraph from './AreaGraph';
+import ScatterGraph from './ScatterGraph';
 
 const MainPage = () => {
 
   const data = [
-    {name: "Facebook", value: 2800000000},
-    {name: "Instagram", value: 1000000000},
-    {name: "Twitter", value: 330000000},
-    {name: "TikTok", value: 1000000000},
-    {name: "LinkedIn", value: 700000000},
-    {name: "SnapChat", value: 500000000},
-    {name: "Pinterest", value: 450000000},
-    {name: "Reddit", value: 430000000},
-    {name: "Telegram", value: 500000000},
-    {name: "Dicord", value: 150000000},
-    {name: "Twitch", value: 30000000},
+    {name: "Facebook", value: 2.8},
+    {name: "Instagram", value: 1},
+    {name: "Twitter", value: 0.33},
+    {name: "TikTok", value: 1},
+    {name: "LinkedIn", value: 0.7},
+    {name: "SnapChat", value: 0.5},
+    {name: "Pinterest", value: 0.45},
+    {name: "Reddit", value: 0.43},
+    {name: "Telegram", value: 0.5},
+    {name: "Discord", value: 0.15},
+    {name: "Twitch", value: 0.03},
   ]
 
   return (
@@ -27,6 +28,7 @@ const MainPage = () => {
         <BarGraph data={data} />
         <LineGraph data={data} />
         <AreaGraph data={data} />
+        <ScatterGraph data={data} />
     </div>
   )
 }

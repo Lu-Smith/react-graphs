@@ -6,7 +6,8 @@ import {
     YAxis,
     CartesianGrid,
     Tooltip,
-    Cell
+    Cell, 
+    ResponsiveContainer
   } from 'recharts';
 
   interface DataItem {
@@ -24,9 +25,8 @@ const ScatterGraph: React.FC<ScatterGraphProps> = ({data}) => {
   const COLORS = ['#ff4500', '#fcff82', '#ff1493', '#ff8c00', '#ffb6c1', '#ffa500', '#ff6347', '#ff69b4', '#ff7f50', '#ffc0cb'];
 
   return (
-    <ScatterChart
-        width={1000}
-        height={420}
+    <ResponsiveContainer>
+      <ScatterChart
         margin={{
         top: 20,
         right: 20,
@@ -44,6 +44,7 @@ const ScatterGraph: React.FC<ScatterGraphProps> = ({data}) => {
           }
           </Scatter>
         </ScatterChart>
+      </ResponsiveContainer>
   )
 }
 

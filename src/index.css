@@ -61,10 +61,10 @@ button:focus-visible {
 }
 
 .Graph {
- height: 400px;
  border: 1px solid #2f3587;
  border-radius: 10px;
- padding: 20px;
+ padding: 20px 20px 0 20px;
+ margin: 0 auto;
 }
 
 @media (prefers-color-scheme: light) {

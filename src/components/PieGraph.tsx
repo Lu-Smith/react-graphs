@@ -1,5 +1,5 @@
 import React from 'react'
-import { PieChart, Pie, Tooltip, Cell} from 'recharts';
+import { PieChart, Pie, Tooltip, Cell, ResponsiveContainer} from 'recharts';
 
 interface DataItem {
   name: string;
@@ -16,7 +16,8 @@ const PieGraph: React.FC<PieGraphProps> = ({data}) => {
   const UNIT = 'mln'; 
 
   return (
-    <PieChart width={400} height={400}>
+    <ResponsiveContainer>
+    <PieChart>
         <Pie
         dataKey="value"
         isAnimationActive={true}
@@ -45,6 +46,7 @@ const PieGraph: React.FC<PieGraphProps> = ({data}) => {
           }}
         />
     </PieChart>
+    </ResponsiveContainer>
   )
 }
 

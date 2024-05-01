@@ -1,5 +1,5 @@
 import React from 'react';
-import { PieChart, Pie, Sector, Cell } from 'recharts';
+import { PieChart, Pie, Tooltip } from 'recharts';
 
 const MainPage = () => {
   const data = [
@@ -12,6 +12,19 @@ const MainPage = () => {
   return (
     <div>
       <h2>Social Network Users</h2>
+      <PieChart width={400} height={400}>
+          <Pie
+            dataKey="value"
+            isAnimationActive={false}
+            data={data}
+            cx="50%"
+            cy="50%"
+            outerRadius={80}
+            fill="#8884d8"
+            label
+          />
+          <Tooltip />
+        </PieChart>
     </div>
   )
 }

@@ -7,13 +7,13 @@ function App() {
 
   return (
     <>
-      <h1>Graphs</h1>
+      {start ? <MainPage /> : <h1>Graphs</h1>}
       <div className="card">
         <button onClick={() => setStart(prev => !prev)}>
-        {start ? 'Start' : 'Home Page'}
+        {start ? 'Home Page' : 'Start'}
         </button>
         <div>
-        {start ? <MainPage /> : <h2>Discover new world of data 📈</h2>}
+        {start ? <h2>Graph 1 📈</h2> : <h2>Discover new world of data 📈</h2>}
         </div>
       
       </div>

@@ -32,7 +32,7 @@ const ScatterGraph: React.FC<ScatterGraphProps> = ({data}) => {
         >
           <CartesianGrid />
           <XAxis dataKey="name" name="Social Media"/>
-          <YAxis type="number" dataKey="value" name="Users"  unit="mln" />
+          <YAxis type="number" dataKey="value" name="Users" unit="mln" />
           <Tooltip cursor={{ strokeDasharray: '3 3' }} />
           <Legend />
           <Scatter name="Social media users" data={data} fill="#8884d8" shape="star" />

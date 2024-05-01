@@ -1,5 +1,5 @@
 import React from 'react'
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Cell, Tooltip } from 'recharts'
 
 interface DataItem {
     name: string;
@@ -11,10 +11,14 @@ interface DataItem {
   }
 
 const BarGraph: React.FC<BarGraphProps> = ({data}) => {
+
+  const COLORS = ['#0092ca', '#009688', '#8594e4', '#00BFA5', '#4DB6AC', '#42b883', '#5585b5', '#53a8b6', '#66bfbf', '#407088'];
+  const UNIT = 'mln'; 
+
   return (
     <BarChart
-        width={500}
-        height={300}
+        width={1000}
+        height={410}
         data={data}
         margin={{
         top: 5,
@@ -22,14 +26,31 @@ const BarGraph: React.FC<BarGraphProps> = ({data}) => {
         left: 20,
         bottom: 5,
         }}
-        barSize={20}
+        barSize={40}
     >
-        <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
-        <YAxis />
-        <Tooltip />
-        <Legend />
+        <XAxis dataKey="name" scale="point" padding={{ left: 15, right: 20 }} tick={{ fill: '#8dc6ff' }} />
+        <YAxis unit="mln" tick={{ fill: '#ffe9e3' }}/>
+        <Tooltip 
+         content={({ payload }) => {
+          if (payload && payload.length > 0) {
+            const { name, value } = payload[0].payload;
+            return (
+              <div style={{ backgroundColor: '#34495e', padding: '3px 15px', borderRadius: '15px' }}>
+                <p>{`${name}: ${value}${UNIT} users.`}</p>
+              </div>
+            );
+          }
+          return null;
+        }}/>
         <CartesianGrid strokeDasharray="3 3" />
-        <Bar dataKey="value" fill="#8884d8" background={{ fill: '#eee' }} />
+        <Bar 
+        dataKey="value" 
+        background={{ fill: '#eee' }} 
+        >
+                {
+          data.map((_, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
+        }
+        </Bar>
     </BarChart>
   )
 }

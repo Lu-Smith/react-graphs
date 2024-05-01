@@ -19,13 +19,22 @@ function App() {
           <div>
             <h2>Graph {pageNumber} 📈</h2>
             <button onClick={handlePages}>
-                    Next
+              <span className="material-symbols-outlined">
+              double_arrow
+              </span>
             </button>
           </div> : 
           <h2>Discover new world of data 📈</h2>}
-          <button onClick={() => setStart(prev => !prev)}>
-            {start ? 'Home Page' : 'Start'}
-          </button>
+          {start ? 
+            <button onClick={() => setStart(prev => !prev)} className='homeButton'>
+              <span className="material-symbols-outlined">
+              home
+              </span> 
+            </button>: 
+            <button onClick={() => setStart(prev => !prev)}>
+            Start
+            </button>
+          }
       </div>
     </>
   )

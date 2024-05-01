@@ -54,6 +54,18 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.homeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.Graph {
+ border: 1px solid #646cff;
+ border-radius: 10px;
+ padding: 20px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

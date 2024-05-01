@@ -23,7 +23,7 @@ const PieGraph: React.FC<PieGraphProps> = ({data}) => {
         data={data}
         cx="50%"
         cy="50%"
-        outerRadius={90}
+        outerRadius={110}
         stroke="grey"
         label={(entry) => entry.name}
         >
@@ -36,7 +36,7 @@ const PieGraph: React.FC<PieGraphProps> = ({data}) => {
             if (payload && payload.length > 0) {
               const { name, value } = payload[0].payload;
               return (
-                <div style={{ backgroundColor: '#000', padding: '3px 15px' }}>
+                <div style={{ backgroundColor: '#000', padding: '3px 15px', borderRadius: '5px' }}>
                   <p>{`${name}: ${value}${UNIT} users.`}</p>
                 </div>
               );

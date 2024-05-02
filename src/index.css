@@ -35,6 +35,10 @@ h1 {
   line-height: 1.1;
 }
 
+h1:hover, h2:hover {
+  color: #1e805a;
+}
+
 h3 {
   position: fixed;
   bottom: 0;
@@ -54,6 +58,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-top: 8px;
 }
 button:hover {
   border-color: #646cff;

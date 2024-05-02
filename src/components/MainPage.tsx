@@ -12,12 +12,12 @@ interface MainProps {
 const MainPage: React.FC<MainProps> = ({pageNumber}) => {
 
   const data = [
-    {name: "Facebook", value: 2.8},
     {name: "TikTok", value: 1},
     {name: "Instagram", value: 1},
+    {name: "Twitter", value: 0.33},
+    {name: "Facebook", value: 2.8},
     {name: "Reddit", value: 0.43},
     {name: "SnapChat", value: 0.5},
-    {name: "Twitter", value: 0.33},
     {name: "LinkedIn", value: 0.7},
     {name: "Twitch", value: 0.03},
     {name: "Pinterest", value: 0.45},
@@ -36,7 +36,6 @@ const MainPage: React.FC<MainProps> = ({pageNumber}) => {
         <ScatterGraph data={data}/>
         }
       </div>
-
     </div>
   )
 }

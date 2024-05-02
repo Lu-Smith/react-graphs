@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import MainPage from './components/MainPage'
 import './App.css'
+import FooterComponent from './components/FooterComponent';
 
 function App() {
   const [start, setStart] = useState(false);
@@ -36,6 +37,7 @@ function App() {
             </button>
           }
       </div>
+      <FooterComponent />
     </>
   )
 }

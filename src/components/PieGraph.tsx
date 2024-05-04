@@ -26,7 +26,6 @@ const PieGraph: React.FC<PieGraphProps> = ({data}) => {
         cy="50%"
         outerRadius={110}
         stroke="grey"
-        labelLine={true}
         label={(entry) => entry.name}
         >
           {
